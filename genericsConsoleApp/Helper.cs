@@ -11,13 +11,27 @@ namespace genericsConsoleApp
     public static class Helper
     {
 
-       
+        public static decimal CalculateGenericDecimal<T>(List<T> list)
+            where T:ICalculateDecimal
+        {
+
+            decimal sum = 0;
+            foreach (var item in list)
+            {
+                sum += item.CalculateTotal();
+            }
+
+            return sum;
+
+        }
+
+
         public static decimal CalculateSumDecimal(List<DecimalItem> list)
         {
             decimal sum = 0;
             foreach (var l in list)
             {
-                sum += (l.Price * l.InStock);
+                sum += l.CalculateTotal(); //(l.Price * l.InStock);
             }
 
             return sum;
@@ -28,7 +42,7 @@ namespace genericsConsoleApp
             decimal sum = 0;
             foreach (var l in list)
             {
-                sum += (l.Price * l.InStock);
+                sum += l.CalculateTotal();// (l.Price * l.InStock);
             }
 
             return sum;

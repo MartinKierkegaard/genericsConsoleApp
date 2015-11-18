@@ -46,6 +46,15 @@ namespace genericsConsoleApp
             decimal resultDecimal2 = Helper.CalculateSumDecimal2(d2List);
             Console.WriteLine("result sum decimal d2list: " + resultDecimal2);
 
+            //use the generic calculate method
+            decimal resultDecimalGeneric = Helper.CalculateGenericDecimal<DecimalItem>(dList);
+            Console.WriteLine("generic sum DecimalItem : "+ resultDecimalGeneric);
+
+            //use the generic calculate method
+            decimal resultDecimalGenericItem2 = Helper.CalculateGenericDecimal<DecimalItem2>(d2List);
+            Console.WriteLine("generic sum DecimalItem2 : " + resultDecimalGenericItem2);
+
+
             //int resultInt = Helper.CalculateSumInt(iList);
             //Console.WriteLine("result sum int : " + resultInt);
 
