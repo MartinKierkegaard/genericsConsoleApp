@@ -12,9 +12,8 @@ namespace genericsConsoleApp
     {
 
         public static decimal CalculateGenericDecimal<T>(List<T> list)
-            where T:ICalculateDecimal
+            where T: ICalculateGeneric<decimal>
         {
-
             decimal sum = 0;
             foreach (var item in list)
             {
@@ -22,8 +21,19 @@ namespace genericsConsoleApp
             }
 
             return sum;
-
         }
+
+        public static int CalculateSumInt(List<IntItem> list)
+        {
+            int sum = 0;
+            foreach (var l in list)
+            {
+                sum += (l.Price * l.InStock);
+            }
+
+            return sum ;
+        }
+
 
 
         //public static decimal CalculateSumDecimal(List<DecimalItem> list)
@@ -48,17 +58,6 @@ namespace genericsConsoleApp
         //    return sum;
         //}
 
-
-        public static int CalculateSumInt(List<IntItem> list)
-        {
-            int sum = 0;
-            foreach (var l in list)
-            {
-                sum += (l.Price * l.InStock);
-            }
-
-            return sum ;
-        }
 
 
 

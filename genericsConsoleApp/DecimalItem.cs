@@ -11,7 +11,13 @@ namespace genericsConsoleApp
         decimal CalculateTotal();
     }
 
-    public class DecimalItem : ICalculateDecimal
+    public interface ICalculateGeneric<T>
+    {
+        T CalculateTotal();
+    }
+    
+
+    public class DecimalItem : ICalculateGeneric<decimal> //: ICalculateDecimalGeneric
     {
         public decimal Price { get; set; }
         public string Itemname { get; set; }
@@ -21,11 +27,9 @@ namespace genericsConsoleApp
         {
             return this.Price*this.InStock;
         }
-
-
     }
 
-    public class DecimalItem2 : ICalculateDecimal
+    public class DecimalItem2 : ICalculateGeneric<decimal>//: ICalculateDecimalGeneric
     {
         public decimal Price { get; set; }
         public string Itemname { get; set; }
@@ -38,11 +42,17 @@ namespace genericsConsoleApp
 
     }
 
-    public class IntItem
+    public class IntItem : ICalculateGeneric<int>
     {
         public int Price { get; set; }
         public string Itemname { get; set; }
         public int InStock { get; set; }
+
+        public int CalculateTotal()
+        {
+            return this.Price * this.InStock;
+        }
+
 
     }
 
