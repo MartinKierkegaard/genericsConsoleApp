@@ -26,27 +26,27 @@ namespace genericsConsoleApp
         }
 
 
-        public static decimal CalculateSumDecimal(List<DecimalItem> list)
-        {
-            decimal sum = 0;
-            foreach (var l in list)
-            {
-                sum += l.CalculateTotal(); //(l.Price * l.InStock);
-            }
+        //public static decimal CalculateSumDecimal(List<DecimalItem> list)
+        //{
+        //    decimal sum = 0;
+        //    foreach (var l in list)
+        //    {
+        //        sum += l.CalculateTotal(); //(l.Price * l.InStock);
+        //    }
 
-            return sum;
-        }
+        //    return sum;
+        //}
 
-        public static decimal CalculateSumDecimal2(List<DecimalItem2> list)
-        {
-            decimal sum = 0;
-            foreach (var l in list)
-            {
-                sum += l.CalculateTotal();// (l.Price * l.InStock);
-            }
+        //public static decimal CalculateSumDecimal2(List<DecimalItem2> list)
+        //{
+        //    decimal sum = 0;
+        //    foreach (var l in list)
+        //    {
+        //        sum += l.CalculateTotal();// (l.Price * l.InStock);
+        //    }
 
-            return sum;
-        }
+        //    return sum;
+        //}
 
 
         public static int CalculateSumInt(List<IntItem> list)

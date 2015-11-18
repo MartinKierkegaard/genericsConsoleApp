@@ -40,11 +40,11 @@ namespace genericsConsoleApp
             iList.Add(new IntItem() { Itemname = "ItemInt7", Price = 86, InStock = 200 });
             iList.Add(new IntItem() { Itemname = "ItemInt8", Price = 2, InStock = 200 });
 
-            decimal resultDecimal = Helper.CalculateSumDecimal(dList);
-            Console.WriteLine("result sum decimal dlist : " + resultDecimal);
+            //decimal resultDecimal = Helper.CalculateSumDecimal(dList);
+            //Console.WriteLine("result sum decimal dlist : " + resultDecimal);
 
-            decimal resultDecimal2 = Helper.CalculateSumDecimal2(d2List);
-            Console.WriteLine("result sum decimal d2list: " + resultDecimal2);
+            //decimal resultDecimal2 = Helper.CalculateSumDecimal2(d2List);
+            //Console.WriteLine("result sum decimal d2list: " + resultDecimal2);
 
             //use the generic calculate method
             decimal resultDecimalGeneric = Helper.CalculateGenericDecimal<DecimalItem>(dList);
