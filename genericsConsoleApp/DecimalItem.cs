@@ -6,19 +6,35 @@ using System.Threading.Tasks;
 
 namespace genericsConsoleApp
 {
-    public class DecimalItem
+    public interface ICalculateDecimal
+    {
+        decimal CalculateTotal();
+    }
+
+    public class DecimalItem : ICalculateDecimal
     {
         public decimal Price { get; set; }
         public string Itemname { get; set; }
         public int  InStock { get; set; }
 
+        public decimal CalculateTotal()
+        {
+            return this.Price*this.InStock;
+        }
+
+
     }
 
-    public class DecimalItem2
+    public class DecimalItem2 : ICalculateDecimal
     {
         public decimal Price { get; set; }
         public string Itemname { get; set; }
         public decimal InStock { get; set; }
+
+        public decimal CalculateTotal()
+        {
+            return this.Price * this.InStock;
+        }
 
     }
 
